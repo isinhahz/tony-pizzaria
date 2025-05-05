@@ -22,7 +22,7 @@ body {
 }
 header {
     height: 60px;
-    width: calc(100% - 160px);
+    width: 100%;
     position: fixed;
     top: 60px;
     display: flex;
@@ -38,7 +38,7 @@ header menu {
 }
 header li {
     padding: 4px 8px;
-    transition: .5s;
+    transition: 0.5s;
 }
 header li:hover {
     background-color: var(--secundary-color);
@@ -81,12 +81,12 @@ section {
 .hero span {
     color: var(--primary-color);
 }
-.container-pizza {
+.container-produtos {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-.pizza {
+.produto {
     position: relative;
     display: flex;
     border-radius: 12px;
@@ -108,7 +108,7 @@ section {
     transition: .5s;
 }
 
-.pizza:hover .adicionar {
+.produto:hover .adicionar {
     opacity: 1;
 }
 .animacao{
@@ -132,7 +132,7 @@ section {
     border-radius: 0 0 12px 12px;
     transition: .5s;
 }
-.pizza:hover .container-info {
+.produto:hover .container-info {
     bottom: 0;
 }
 
@@ -143,7 +143,7 @@ section {
     color: white;
 }
 
-.container-info span{
+.container-info span {
     display: grid;
     place-content: center;
     width: 57px;
@@ -154,7 +154,72 @@ section {
     color: white;
 }
 .cardapio {
-    background-color: lightgreen;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.titulo-secao {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.titulo-secao h3 {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.cardapio-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 260px;
+    border-bottom: 2px solid var(--secundary-color);
+}
+
+.cabecalho-item {
+    display: flex;
+    justify-content: space-between;
+    color: var(--primary-color);
+}
+
+.cabecalho-item h4,
+.cabecalho-item a{
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.cardapio-item.bebidas{
+    border: none;
+}
+
+.cardapio-item.bebidas .produto{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    border-radius: 4px;
+    padding: 16px;
+    transition: .5s;
+}
+
+.cardapio-item.bebidas .produto:hover{
+    box-shadow: 2px 2px 8px #bbb;
+}
+
+.cardapio-item.bebidas .valor {
+    font-size: 1rem;
+    color: var(--primary-color);
+    width: 100%;
+}
+
+.cardapio-item.bebidas .descricao{
+    font-size: 0.5rem;
+    width: 100%;
 }
 .servicos {
     background-color: lightpink;
